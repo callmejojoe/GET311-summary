@@ -1,0 +1,281 @@
+<!-- BREAK-EVEN ANALYSIS PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 05 · Analysis Method</div>
+  <h1 class="headline-xl">Break-Even<br><em>Analysis</em></h1>
+  <p class="deck">Find the precise output level where a business neither profits nor loses — then use that knowledge to plan products, price strategically, and decide between competing processes.</p>
+  <div class="byline">Based on Engr. Prof. K.C. Bala's GET 311 Lecture Notes, Section 5.0</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <span class="tag tag-red">Exam Favourite</span><span class="tag tag-gold">Many Variants</span><span class="tag tag-green">Graphical + Formula</span>
+  </div>
+</div>
+
+<div class="page-content">
+
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">The Break-Even Concept</h2>
+      <p class="body-text dropcap">
+        Break-even analysis is one of the most practical and frequently tested topics in GET 311. At its core, it answers a deceptively simple question: <strong>how many units must we produce and sell before we stop losing money?</strong> Below that output level every unit sold deepens the loss; above it every additional unit generates pure profit.
+      </p>
+      <p class="body-text">
+        The analysis rests on a clean separation of costs into two categories: <strong>Fixed Costs</strong>, which are constant regardless of output (rent, depreciation, administrative overhead), and <strong>Variable Costs</strong>, which scale directly with each unit produced (materials, direct labour, packaging).
+      </p>
+      <p class="body-text">
+        The Break-Even Point (BEP) is therefore defined as the output level Q at which <strong>Total Revenue = Total Cost</strong>: no profit is earned, no loss is suffered, and the business has exactly recovered all its costs for that period.
+      </p>
+
+      <div class="formula-block">
+<span class="cmt">// CORE VARIABLES</span>
+F = Total Fixed Costs      (₦/period)
+p = Selling price per unit (₦/unit)
+v = Variable cost per unit (₦/unit)
+Q = Quantity produced      (units)
+
+<span class="cmt">// COST AND REVENUE EQUATIONS</span>
+Total Cost (TC)    = F + v·Q    <span class="var">Eq.26</span>
+Sales Revenue (SR) = p·Q        <span class="var">Eq.27</span>
+
+<span class="cmt">// AT BREAK-EVEN: TC = SR</span>
+F + v·Q_BEP = p·Q_BEP
+F = Q_BEP(p − v)
+
+Q_BEP = F / (p − v)             <span class="var">Eq.28 ← Key</span>
+
+<span class="cmt">// (p − v) is called the CONTRIBUTION MARGIN</span>
+<span class="cmt">// Each unit sold contributes this to covering F</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="infobox">
+        <div class="infobox-title">Fixed vs Variable Costs</div>
+        <div class="col-2" style="gap:12px">
+          <div>
+            <div style="font-family:var(--font-head);font-size:10px;letter-spacing:0.15em;color:var(--accent-gold);margin-bottom:6px">FIXED COSTS</div>
+            <ul class="steps-list" style="font-size:12px">
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px">■</div><div>Rent &amp; Rates</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px">■</div><div>Depreciation</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px">■</div><div>Research &amp; Dev.</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px">■</div><div>Admin. overhead</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px">■</div><div>Insurance</div></li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-family:var(--font-head);font-size:10px;letter-spacing:0.15em;color:var(--accent-red);margin-bottom:6px">VARIABLE COSTS</div>
+            <ul class="steps-list" style="font-size:12px">
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px;color:var(--accent-red)">■</div><div>Raw materials</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px;color:var(--accent-red)">■</div><div>Direct labour</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px;color:var(--accent-red)">■</div><div>Fuel &amp; power</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px;color:var(--accent-red)">■</div><div>Sales commission</div></li>
+              <li><div class="step-badge" style="font-size:10px;width:20px;height:20px;color:var(--accent-red)">■</div><div>Royalties/unit</div></li>
+            </ul>
+          </div>
+        </div>
+        <p class="body-text" style="font-size:12px;margin-top:10px">Note: <strong>Semi-variable costs</strong> are fixed up to a capacity threshold, then increase stepwise (e.g., warehouse space). They complicate the linear model.</p>
+      </div>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">"The BEP is not a destination — it's the starting gun. Every unit beyond it is profit."</div>
+        <div class="pull-quote-attr">— Production Management Principle</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ CONTRIBUTION, PV RATIO, MARGIN OF SAFETY ══ -->
+  <div class="fade-in">
+    <div class="kicker">Extended Break-Even Concepts</div>
+    <h2 class="headline-lg">Contribution, P/V Ratio &amp; Margin of Safety</h2>
+    <div class="col-3">
+      <div>
+        <div class="infobox gold">
+          <div class="infobox-title gold">Contribution Margin</div>
+          <p class="body-text" style="font-size:13px">The amount each unit sold contributes towards covering fixed costs, after variable costs are paid. Once FC is fully covered, each unit contributes pure profit.</p>
+          <div class="formula-block" style="font-size:11.5px">
+C = p − v    <span class="cmt">// per unit</span>
+At BEP: C × Q = F
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="infobox gold">
+          <div class="infobox-title gold">Profit/Volume Ratio (ϕ)</div>
+          <p class="body-text" style="font-size:13px">The fraction of each naira of sales revenue that becomes contribution. A higher ϕ means faster recovery of fixed costs.</p>
+          <div class="formula-block" style="font-size:11.5px">
+ϕ = (p − v) / p
+  = Contribution / SR
+  = F / (p·Q)   <span class="var">Eq.34-36</span>
+Q_BEP = F / ϕ  <span class="var">Eq.37</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="infobox gold">
+          <div class="infobox-title gold">Margin of Safety (MoS)</div>
+          <p class="body-text" style="font-size:13px">How far current output is above the BEP. It measures business resilience — how much sales can fall before losses begin.</p>
+          <div class="formula-block" style="font-size:11.5px">
+MoS    = Q_current − Q_BEP
+MoS%   = MoS / Q_current × 100
+<span class="cmt">// Higher MoS% = safer business</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ WORKED EXAMPLES ════════════════════════════ -->
+  <div class="kicker">Worked Examples — Including Past Paper Solutions</div>
+
+  <div class="col-2 fade-in">
+    <div>
+      <div class="infobox green">
+        <div class="infobox-title green">Example 1 — Prof. Bala's Classic (Sec. 5.5.5)</div>
+        <p class="body-text" style="font-size:13px">A company: output 5,000 items/month, fixed cost ₦2,000/month, variable cost 20k/item, selling price 40k/item. Find BEP and loss at 5,000 units.</p>
+        <div class="formula-block" style="font-size:11.5px">
+<span class="cmt">// Note: 20 kobo = ₦0.20, 40 kobo = ₦0.40</span>
+p = ₦0.40/unit, v = ₦0.20/unit, F = ₦2,000
+
+Q_BEP = F/(p−v) = 2000/(0.40−0.20)
+       = 2000/0.20 = <span class="val">10,000 units</span>
+
+Sales at BEP = 10,000 × 0.40 = <span class="val">₦4,000</span>
+
+<span class="cmt">// Loss at 5,000 units (below BEP):</span>
+TC = 2000 + 0.20×5000 = ₦3,000
+SR = 0.40 × 5000      = ₦2,000
+Loss = TC − SR        = <span class="val">₦1,000</span>
+        </div>
+        <p class="body-text" style="font-size:12px;margin:6px 0 0">At 5,000 units (half the BEP), the company loses ₦1,000 — exactly the fixed cost minus contribution earned.</p>
+      </div>
+    </div>
+    <div>
+      <div class="infobox red">
+        <div class="infobox-title red">Example 2 — Past Paper Q63 (Exam Staple)</div>
+        <p class="body-text" style="font-size:13px">Manufacturer: labour ₦115/unit, material ₦76/unit, variable cost ₦2.32/unit, selling price ₦600/unit, monthly overhead ₦428,000.</p>
+        <div class="formula-block" style="font-size:11.5px">
+<span class="cmt">// Step 1: Total variable cost per unit</span>
+v = 115 + 76 + 2.32 = <span class="val">₦193.32</span>
+
+<span class="cmt">// Step 2: Contribution per unit</span>
+C = p − v = 600 − 193.32 = <span class="val">₦406.68</span>
+
+<span class="cmt">// Step 3: BEP</span>
+Q_BEP = F / C = 428,000 / 406.68
+       = <span class="val">1,052.6 ≈ 1,053 units</span>  ← Answer D
+
+<span class="cmt">// Always round UP for BEP</span>
+<span class="cmt">// (1,052 units still makes a loss)</span>
+        </div>
+        <p class="body-text" style="font-size:12px;margin:6px 0 0">Key trap: labour + material + variable overhead ALL count as variable costs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="infobox fade-in" style="margin-top:16px">
+    <div class="infobox-title">Example 3 — Two-Process Comparison (Exercise Q2 from Notes)</div>
+    <p class="body-text">Process X: F=₦20,000/yr, v=₦12/unit. Process Y: F=₦8,000/yr, v=₦22/unit. At what production quantity Q are total costs equal?</p>
+    <div class="col-2">
+      <div>
+        <div class="formula-block">
+<span class="cmt">// Set TC_X = TC_Y</span>
+20,000 + 12Q = 8,000 + 22Q
+20,000 − 8,000 = 22Q − 12Q
+12,000 = 10Q
+Q = <span class="val">1,200 units/year</span>
+
+<span class="cmt">// Verify at Q=1,200:</span>
+TC_X = 20,000 + 12×1,200 = ₦34,400
+TC_Y = 8,000 + 22×1,200  = ₦34,400  ✓
+        </div>
+      </div>
+      <div>
+        <div class="infobox gold">
+          <div class="infobox-title gold">Decision Rule</div>
+          <ul class="steps-list" style="font-size:12.5px">
+            <li><div class="step-badge">Q&lt;1200</div><div>Use <strong>Process Y</strong> — lower fixed cost dominates at low volumes</div></li>
+            <li><div class="step-badge">Q=1200</div><div>Indifferent — both processes cost the same</div></li>
+            <li><div class="step-badge">Q&gt;1200</div><div>Use <strong>Process X</strong> — lower variable cost pays off at high volumes</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ APPLICATIONS ══════════════════════════════ -->
+  <div class="fade-in">
+    <h2 class="headline-lg">Applications of Break-Even Analysis</h2>
+    <div class="col-2">
+      <div>
+        <ul class="steps-list">
+          <li><div class="step-badge">①</div><div><strong>Product Planning:</strong> Determine which new products to introduce and which existing products to discontinue based on their contribution margins and BEP requirements.</div></li>
+          <li><div class="step-badge">②</div><div><strong>Product Pricing:</strong> Analyse how price changes affect BEP. A higher price reduces BEP units needed; a lower price may increase market share but requires higher volume to break even.</div></li>
+          <li><div class="step-badge">③</div><div><strong>Profit Planning:</strong> Extend the BEP formula to find Q required for a target profit: Q = (F + Profit) / (p − v).</div></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="steps-list">
+          <li><div class="step-badge">④</div><div><strong>Make-or-Buy Decisions:</strong> Compare the total cost of internal manufacture versus external purchase. The BEP tells you the quantity at which manufacturing in-house becomes cheaper.</div></li>
+          <li><div class="step-badge">⑤</div><div><strong>Equipment Selection:</strong> Compare two machines with different fixed and variable cost structures to find the production volume at which each is preferred — exactly the Process X vs Y analysis above.</div></li>
+          <li><div class="step-badge">⑥</div><div><strong>Budget Planning:</strong> Express break-even as a percentage of budgeted sales to know when in the fiscal year/month/week the business goes from loss to profit.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Break-Even Analysis</div>
+    <ul>
+      <li><strong>Missing a variable cost component:</strong> In Q63, some students forget the ₦2.32 variable overhead, giving a wrong v and wrong BEP. Add ALL variable costs: labour + material + variable overhead + royalties.</li>
+      <li><strong>Treating royalties as fixed costs:</strong> Royalties paid per unit sold are variable costs (see Q66 — Lebron James royalty of ₦1,000 per pair is variable, making total v = 900+800+400+1000 = ₦3,100).</li>
+      <li><strong>Not rounding UP:</strong> BEP = 1,052.6 means you need 1,053 units (selling 1,052 still results in a tiny loss). Always round up for BEP calculations.</li>
+      <li><strong>Using revenue instead of contribution:</strong> The P/V ratio is contribution/revenue, not profit/revenue. Contribution = SR − Variable Costs, not SR − Total Costs.</li>
+      <li><strong>Ignoring the linear model assumption:</strong> The standard BEP assumes constant prices and variable costs. In reality, bulk discounts, overtime labour, and price elasticity make the curves non-linear — but the exam assumes linearity.</li>
+    </ul>
+  </div>
+
+  <div class="quiz-masthead fade-in">Self-Assessment · Break-Even Analysis</div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. A new product has monthly fixed cost ₦6,000, variable cost ₦2/unit, selling price ₦7/unit. How many units must be sold to break even?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 600 units</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 857 units</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 1,000 units</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 1,200 units</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: D — 1,200 units.</strong><br>Q_BEP = F/(p−v) = 6,000/(7−2) = 6,000/5 = <strong>1,200 units</strong>. This is Exercise Q1(a) directly from Prof. Bala's notes. Option B (857) is the mistake made when dividing 6,000 by 7 instead of by the contribution margin of 5.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. A shoe manufacturer: labour ₦900, materials ₦800, variable costs ₦400, royalty ₦1,000 per pair, fixed charges ₦5,000,000/month, selling price ₦5,000/pair. BEP pairs/month?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 2,590</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 2,632</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 2,712</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 2,890</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — 2,632 pairs.</strong><br>Total v = 900 + 800 + 400 + 1,000 = ₦3,100 per pair (royalty is variable!)<br>Contribution = 5,000 − 3,100 = ₦1,900/pair<br>Q_BEP = 5,000,000 / 1,900 = 2,631.6 → <strong>2,632 pairs</strong>. This is Q66 from the past paper.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. Using the Q1 problem, what is the profit or loss if 1,000 units are sold in a month?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Profit of ₦4,000</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Loss of ₦1,000</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Break-even — no profit or loss</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Profit of ₦1,000</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — Loss of ₦1,000.</strong><br>SR = 7 × 1,000 = ₦7,000 | TC = 6,000 + 2×1,000 = ₦8,000 | Loss = TC − SR = ₦1,000.<br>Alternatively: we are 200 units below BEP (1,200 − 1,000 = 200). Loss = 200 × contribution margin = 200 × ₦5 = ₦1,000. Same result — the shortfall approach is often faster.</div>
+  </div>
+
+</div>

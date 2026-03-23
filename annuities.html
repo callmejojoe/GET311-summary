@@ -1,0 +1,126 @@
+<!-- ANNUITIES PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 07 · Analysis Method</div>
+  <h1 class="headline-xl">Annuities &<br><em>Series Payments</em></h1>
+  <p class="deck">Car loans, mortgages, equipment leases, savings plans — real-world finance runs on regular payments. These formulas let you value them with precision.</p>
+  <div class="byline">GET 311 · Engineering Economics · FUTM</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-grey">Series Math</span><span class="tag tag-gold">5 Annuity Types</span></div>
+</div>
+<div class="page-content">
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">What Is an Annuity?</h2>
+      <p class="body-text dropcap">A <strong>uniform series of equal payments occurring at equal time intervals</strong> is called an annuity. The amounts must be identical (A each period), the intervals must be equal, and interest compounds at rate i. This simple structure appears in virtually every loan, savings plan, and lease encountered in engineering practice.</p>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <caption>FIVE TYPES OF ANNUITIES — Definitions &amp; Key Features</caption>
+          <thead><tr><th>Type</th><th>First Payment</th><th>Duration</th><th>Q# in Past Paper</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Ordinary Annuity</strong></td><td class="mono">End of period 1</td><td class="mono">Finite (n)</td><td class="mono">Q79 → Answer A</td></tr>
+            <tr><td><strong>Annuity Due</strong></td><td class="mono">Beginning of period 1</td><td class="mono">Finite (n)</td><td class="mono">Q80 → Answer C</td></tr>
+            <tr><td><strong>Deferred Annuity</strong></td><td class="mono">End of period D</td><td class="mono">Finite</td><td class="mono">Q82 → Answer D</td></tr>
+            <tr><td><strong>Annuity Certain</strong></td><td class="mono">End of period 1</td><td class="mono">Fixed span</td><td class="mono">Q78 → Answer C</td></tr>
+            <tr><td><strong>Perpetuity</strong></td><td class="mono">End of period 1</td><td class="mono">Forever (∞)</td><td class="mono">Q81 → Answer B</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="formula-block">
+<span class="cmt">// Future worth of annuity (F/A)</span>
+F = A[(1+i)ⁿ−1]/i = A(F/A,i%,n)    <span class="var">Eq.6</span>
+
+<span class="cmt">// Sinking fund — find A given F (A/F)</span>
+A = F·i/[(1+i)ⁿ−1] = F(A/F,i%,n)  <span class="var">Eq.7</span>
+
+<span class="cmt">// Present worth of annuity (P/A)</span>
+P = A[(1+i)ⁿ−1]/[i(1+i)ⁿ]         <span class="var">Eq.8</span>
+
+<span class="cmt">// Capital recovery — find A given P (A/P)</span>
+A = P·i(1+i)ⁿ/[(1+i)ⁿ−1]
+
+<span class="cmt">// Perpetuity — n→∞</span>
+P = A/i
+
+<span class="cmt">// Deferred annuity</span>
+P = A(P/A,i%,n−D+1)(P/F,i%,D−1)
+      </div>
+    </div>
+    <div>
+      <div class="infobox green">
+        <div class="infobox-title green">Example — Capital Recovery (Q12/Q50)</div>
+        <p class="body-text" style="font-size:13px">Generator costs ₦10,000. Repaid in 5 equal annual instalments at 8%. Find annual payment A.</p>
+        <div class="formula-block" style="font-size:11.5px">
+A = P(A/P, 8%, 5)
+  = 10,000 × 0.2505
+  = <span class="val">₦2,504.57</span>  ← Answer D
+
+<span class="cmt">// (A/P, 8%, 5) = 0.2505 from tables</span>
+        </div>
+      </div>
+      <div class="infobox red" style="margin-top:14px">
+        <div class="infobox-title red">Example — Series Compound Amount</div>
+        <p class="body-text" style="font-size:13px">Usman invests ₦700/month at 12% interest/month for 1 year. Total at end?</p>
+        <div class="formula-block" style="font-size:11.5px">
+F = 700(F/A, 12%, 12)
+  = 700×[(1.12)¹²−1]/0.12
+  = 700×[(3.896−1)/0.12]
+  = 700 × 24.133 = <span class="val">₦16,893.10</span>
+        </div>
+      </div>
+      <div class="infobox" style="margin-top:14px">
+        <div class="infobox-title">Example — Sinking Fund (Q13)</div>
+        <p class="body-text" style="font-size:13px">What annuity over 12 years accumulates ₦20,000 at 6% annually?</p>
+        <div class="formula-block" style="font-size:11.5px">
+A = F(A/F, 6%, 12)
+  = 20,000 × 0.05928
+  = <span class="val">₦1,185.54</span>  ← Answer B
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Annuities</div>
+    <ul>
+      <li><strong>Ordinary vs Annuity Due:</strong> Default is ordinary (end-of-period). If payments are at the beginning, multiply the ordinary annuity result by (1+i).</li>
+      <li><strong>Deferred annuity n confusion:</strong> The n in (P/A) = number of payments, not total time span. If 8 payments start at year 10, n=8, D=10.</li>
+      <li><strong>Sinking fund vs Capital Recovery:</strong> Both find A, but (A/F) is given F; (A/P) is given P. They are NOT interchangeable — always check what you're given.</li>
+    </ul>
+  </div>
+  <div class="quiz-masthead fade-in">Self-Assessment · Annuities</div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. An annuity where payments are made at the BEGINNING of each period is called:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Ordinary annuity</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Deferred annuity</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Annuity due</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Perpetuity</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C — Annuity due.</strong> Beginning-of-period payments = annuity due. End-of-period = ordinary annuity. Q80 in the past paper.</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. Present worth of a ₦3,000 annuity at 8% compounded annually, paid for 3 years?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> ₦7,654.04</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> ₦7,731.29</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> ₦7,420.89</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> ₦7,590.12</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — ₦7,731.29.</strong> P = 3000(P/A, 8%, 3) = 3000 × 2.5771 = ₦7,731.30. This is Q11 and Q51 from the past paper.</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. An annuity that continues forever with no fixed end date is called:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Annuity certain</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Perpetuity</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Deferred annuity</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Ordinary annuity</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — Perpetuity.</strong> P = A/i for a perpetuity. Q81 in the past paper.</div>
+  </div>
+</div>

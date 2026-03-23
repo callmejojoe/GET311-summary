@@ -1,0 +1,244 @@
+<!-- DEPRECIATION & DEPLETION PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 04 · Core Concept</div>
+  <h1 class="headline-xl">Depreciation &<br><em>Depletion</em></h1>
+  <p class="deck">Assets wear out. Resources are consumed. Four distinct methods for quantifying this loss — each with different implications for tax, book value, and exam answers.</p>
+  <div class="byline">GET 311 · Engineering Economics · FUTM</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-gold">4 Methods</span><span class="tag tag-red">Many Past Paper Qs</span></div>
+</div>
+
+<div class="page-content">
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">Depreciation vs Depletion</h2>
+      <p class="body-text dropcap">Assets that generate economic value over multiple years gradually lose that value through use, obsolescence, or physical decay. <strong>Depreciation</strong> accounts for this loss systematically, spreading the asset's cost over its useful life as an annual expense charge.</p>
+      <p class="body-text"><strong>Depletion</strong> is the analogous concept for natural resources — oil wells, mines, timber stands, quarries. As the resource is extracted, its value diminishes. The two depletion methods are the Unit (Factor) Method and the Percentage Method.</p>
+
+      <div class="infobox gold">
+        <div class="infobox-title gold">Key Definitions</div>
+        <div class="formula-block" style="font-size:11.5px">
+P = First Cost (purchase + install + taxes)
+S = Salvage Value (estimated resale at end)
+n = Useful Life (years)
+BV = Book Value at any time k
+d  = Annual depreciation amount
+        </div>
+      </div>
+
+      <div class="infobox" style="margin-top:14px">
+        <div class="infobox-title">Types of Depreciation (Q88, Q89)</div>
+        <ul class="steps-list" style="font-size:13px">
+          <li><div class="step-badge">📉</div><div><strong>Physical Depreciation:</strong> Due to wear, tear, and reduced ability to produce. The machine breaks down more often, requires more maintenance, outputs less.</div></li>
+          <li><div class="step-badge">🔄</div><div><strong>Functional (Obsolescence) Depreciation:</strong> Demand for the function the asset performs decreases, or a superior technology replaces it. A functional machine may be abandoned because something better exists.</div></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="pull-quote">
+        <div class="pull-quote-text">"Depreciation is not a cash expense — it is an accounting allocation of a past cash outflow over time."</div>
+        <div class="pull-quote-attr">— Engineering Economics Principle</div>
+      </div>
+      <div class="infobox red">
+        <div class="infobox-title red">Why It Matters for Exams</div>
+        <ul class="steps-list" style="font-size:12.5px">
+          <li><div class="step-badge">Q9</div><div>SYD: first 3 years depreciation for ₦9,000 asset → ₦3,927.27</div></li>
+          <li><div class="step-badge">Q59</div><div>SL: book value after 8 years for ₦8,000 machine → ₦2,000</div></li>
+          <li><div class="step-badge">Q8</div><div>Unit depletion: Saudi oil well 500,000 of 5M barrels → $5M</div></li>
+          <li><div class="step-badge">Q60</div><div>SYD: find life n when depreciation ≤ 20% of first cost</div></li>
+          <li><div class="step-badge">Q112</div><div>Sinking fund is seldom used because initial depreciation is LOW</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ FOUR METHODS ══════════════════════════════ -->
+  <div class="kicker fade-in">The Four Depreciation Methods</div>
+
+  <!-- SL -->
+  <div class="infobox green fade-in" style="margin-bottom:16px">
+    <div class="infobox-title green">Method 1: Straight-Line (SL) — Simplest, Most Common</div>
+    <p class="body-text">Assumes loss in value is <strong>directly proportional to age</strong>. Every year depreciates the asset by the same fixed amount. The book value declines linearly from P to S over n years.</p>
+    <div class="col-2">
+      <div>
+        <div class="formula-block" style="font-size:12px">
+Annual depreciation:
+d = (P − S) / n
+
+Book Value at year k:
+BV_k = P − k·d
+     = P − k·(P−S)/n
+
+<span class="cmt">// Q59: P=₦8,000, S=₦500, n=10</span>
+d = (8000−500)/10 = <span class="val">₦750/year</span>
+BV₈ = 8000 − 8×750 = <span class="val">₦2,000</span>  ← Answer A
+        </div>
+      </div>
+      <div>
+        <div class="infobox" style="background:var(--paper4)">
+          <div class="infobox-title">SL Characteristics</div>
+          <ul class="steps-list" style="font-size:12px">
+            <li><div class="step-badge">✓</div><div>Simplest to compute</div></li>
+            <li><div class="step-badge">✓</div><div>Equal tax deductions each year</div></li>
+            <li><div class="step-badge">✗</div><div>May not reflect true value loss</div></li>
+            <li><div class="step-badge">✗</div><div>No time value consideration</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYD -->
+  <div class="infobox red fade-in" style="margin-bottom:16px">
+    <div class="infobox-title red">Method 2: Sum-of-Years Digits (SYD) — Accelerated</div>
+    <p class="body-text">Depreciates <strong>more heavily in early years</strong>, tapering off over time. This better reflects the reality that new assets lose value faster. Favoured for tax purposes.</p>
+    <div class="col-2">
+      <div>
+        <div class="formula-block" style="font-size:12px">
+SOYD = n(n+1)/2
+
+Depreciation in year k:
+d_k = (n−k+1)/SOYD × (P−S)
+
+<span class="cmt">// Q9/Q61: P=₦9,000, S=₦1,000, n=10</span>
+SOYD = 10×11/2 = 55
+d₁ = (10/55)(8000) = <span class="val">₦1,454.55</span>
+d₂ = (9/55)(8000)  = <span class="val">₦1,309.09</span>
+d₃ = (8/55)(8000)  = <span class="val">₦1,163.64</span>
+Sum (3 yrs) =       <span class="val">₦3,927.27</span>  ← Answer B
+        </div>
+      </div>
+      <div>
+        <div class="infobox" style="background:var(--paper4)">
+          <div class="infobox-title">SYD — The NUMERATOR Pattern</div>
+          <p class="body-text" style="font-size:12px">For n=10:</p>
+          <div class="formula-block" style="font-size:10.5px;line-height:1.8">
+Year 1: numerator = 10
+Year 2: numerator =  9
+Year 3: numerator =  8
+  ⋮
+Year 10: numerator = 1
+SOYD (denominator) = 55
+          </div>
+          <p class="body-text" style="font-size:11px;margin:6px 0 0"><strong>Trap:</strong> Year k numerator = n−k+1 (NOT n−k). At year 1 it must equal n.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DB -->
+  <div class="infobox fade-in" style="margin-bottom:16px">
+    <div class="infobox-title">Method 3: Declining Balance (DB) — Fixed % of Book Value</div>
+    <p class="body-text">Annual depreciation is a <strong>fixed percentage of the remaining book value</strong> at the start of that year. Depreciation amount declines each year (hence the name). Often used as Double Declining Balance (DDB) with d% = 2/n.</p>
+    <div class="formula-block" style="font-size:12px">
+Rate:       d% = 1 − (S/P)^(1/n)     <span class="cmt">// OR fixed rate like 2/n</span>
+Book Value: BV_k = P(1 − d%)ᵏ
+Annual dep: d_k  = d% × BV_{k-1}
+
+<span class="cmt">// Note: DB never mathematically reaches exactly S</span>
+<span class="cmt">// Often switched to SL when SL gives larger deduction</span>
+    </div>
+    <p class="body-text" style="font-size:13px">The answer to <strong>Q87</strong> is Declining Balance — "the method where annual depreciation cost is a fixed percentage of book value at the beginning of the year."</p>
+  </div>
+
+  <!-- Sinking Fund -->
+  <div class="infobox fade-in" style="margin-bottom:16px">
+    <div class="infobox-title">Method 4: Sinking Fund — Accumulate for Replacement</div>
+    <p class="body-text">Establishes a hypothetical fund that grows at interest rate i, reaching (P−S) by end of life n. Annual deposit A is constant, but the depreciation charge (deposit + interest earned on fund) increases each year.</p>
+    <div class="formula-block" style="font-size:12px">
+Annual deposit: A = (P−S)(A/F, i%, n)
+
+Depreciation charge in year k:
+d_k = A + i×(accumulated fund at end of yr k-1)
+
+<span class="cmt">// Initial depreciation is LOW — grows over time</span>
+<span class="cmt">// This is why it's seldom used (Q112 answer = D)</span>
+<span class="cmt">// Companies prefer HIGH early depreciation for tax</span>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- DEPLETION -->
+  <div class="fade-in">
+    <h2 class="headline-lg">Depletion Methods</h2>
+    <div class="col-2">
+      <div class="infobox green">
+        <div class="infobox-title green">Unit Method (Factor Method) — Q8, Q95, Q96</div>
+        <div class="formula-block" style="font-size:11.5px">
+Depletion charge =
+  (Initial Cost × Units produced this yr)
+  / Total estimated units in property
+
+<span class="cmt">// Q8: Saudi oil well</span>
+= ($50,000,000 × 500,000) / 5,000,000
+= $50M × 0.10 = <span class="val">$5,000,000</span>  ← Answer A
+        </div>
+      </div>
+      <div class="infobox red">
+        <div class="infobox-title red">Percentage Method (Depletion Allowance) — Q62, Q93, Q94</div>
+        <div class="formula-block" style="font-size:11.5px">
+Depletion = Fixed % of Gross Income
+(Maximum = 50% of net taxable income)
+
+Oil: 22% of gross income
+<span class="cmt">// Q62: Shell, gross income ₦50M</span>
+Depletion = 0.22 × 50M = ₦11M
+But max = 50% × net taxable ₦18.5M = ₦9.25M
+∴ Allowable depletion = <span class="val">₦9,250,000</span>  ← Answer C
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Depreciation</div>
+    <ul>
+      <li><strong>SYD numerator error:</strong> In year k, numerator = (n−k+1). At year 1 = n; at year n = 1. Students write (n−k) — off by one throughout.</li>
+      <li><strong>Depreciation vs Depletion:</strong> Depreciation applies to manufactured assets (machines, buildings). Depletion applies to natural resource extraction (oil, coal, timber). Don't mix them up.</li>
+      <li><strong>DB never reaches salvage exactly:</strong> The formula BV_k = P(1−d%)ᵏ asymptotically approaches zero, not S. In practice, switch to SL when SL gives higher depreciation.</li>
+      <li><strong>Sinking Fund: initial depreciation is LOW:</strong> Unlike SYD/DB, the sinking fund method gives small charges early and large charges later. This is the opposite of what businesses want for tax deferral. Q112 answer is D.</li>
+    </ul>
+  </div>
+
+  <div class="quiz-masthead fade-in">Self-Assessment · Depreciation</div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. Asset purchased for ₦9,000, sold for ₦1,000 after 10 years (SYD method). Total depreciation in first 3 years?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> ₦3,279.27</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> ₦3,927.27</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> ₦3,729.27</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> ₦3,792.72</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — ₦3,927.27.</strong> SOYD=55, P−S=₦8,000. d₁=10/55×8000=₦1,454.55; d₂=9/55×8000=₦1,309.09; d₃=8/55×8000=₦1,163.64. Total = ₦3,927.27. This is Q9 and Q61 in the past paper.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. Why is the sinking fund depreciation method seldom used in industry?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> It is mathematically too complex</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> It requires government regulatory approval</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> It ignores the asset's salvage value</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> The initial depreciation charge is low</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: D.</strong> The sinking fund produces low depreciation charges early and high charges later. Businesses prefer the opposite — high early depreciation (SYD, DB) to reduce taxable income sooner (tax deferral). This is Q112 in the past paper.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. The Declining Balance method assumes that annual depreciation is:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Equal each year (constant amount)</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Proportional to the remaining years of life</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> A fixed percentage of the book value at the start of the year</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Based on an interest-bearing sinking fund</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C.</strong> DB applies a fixed % (e.g., 20% or 2/n for DDB) to the declining book value. Since BV decreases each year, the annual charge also decreases — hence "declining balance." This is Q87 in the past paper.</div>
+  </div>
+</div>

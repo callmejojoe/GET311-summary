@@ -1,0 +1,252 @@
+<!-- TIME VALUE OF MONEY PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 01 · Core Concept</div>
+  <h1 class="headline-xl">Time Value<br>of <em>Money</em></h1>
+  <p class="deck">The bedrock principle of engineering economics: a naira in hand today is worth more than a naira promised tomorrow — because money has earning power, and the future is uncertain.</p>
+  <div class="byline">By Prof. K.C. Bala · Mech. Engrg Dept., FUTM Minna</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <span class="tag tag-red">Foundational</span>
+    <span class="tag tag-gold">Always Examined</span>
+    <span class="tag tag-grey">Conceptual</span>
+  </div>
+</div>
+
+<div class="page-content">
+
+  <!-- ══ INTRO ══════════════════════════════════════════════ -->
+  <div class="col-2-3 fade-in">
+    <div>
+      <h2 class="headline-lg">Why Money Has a Time Dimension</h2>
+      <p class="body-text dropcap">
+        The concept of the <strong>Time Value of Money (TVM)</strong> is deceptively simple yet profoundly powerful. It states that an amount of money available at the present time is worth more than the identical amount at any future date, given a positive rate of interest. This is not merely an economic abstraction — it is a mathematical fact rooted in money's capacity to earn returns.
+      </p>
+      <p class="body-text">
+        Consider a straightforward example from Prof. Bala's notes: if you deposit <strong>₦200 in a bank at 10% per year</strong>, you earn ₦20 in interest by year-end, giving you ₦220. This means ₦220 receivable one year from today is exactly <em>equivalent</em> to ₦200 today — at that interest rate. The ₦20 gap is the quantified time value.
+      </p>
+      <p class="body-text">
+        But why does this gap exist at all? There are <strong>four interconnected reasons</strong>, and understanding all of them helps you reason about any TVM problem from first principles rather than just applying formulas blindly.
+      </p>
+
+      <hr class="rule-single"/>
+
+      <h3 class="headline-md">The Four Pillars of TVM</h3>
+
+      <div class="infobox gold" style="margin-top:12px">
+        <div class="infobox-title gold">① Earning Power of Capital</div>
+        <p class="body-text" style="margin:0">Money is productive. Invested capital generates returns — through interest, dividends, or business profit. A sum available now can be immediately deployed to earn more money. One naira today can become 1.1 naira in one year; a future promise of ₦1 has no such guarantees.</p>
+      </div>
+
+      <div class="infobox gold" style="margin-top:12px">
+        <div class="infobox-title gold">② Inflation — The Silent Thief</div>
+        <p class="body-text" style="margin:0">In an inflationary economy, the general price level rises over time, meaning each naira buys progressively fewer goods and services. ₦5,000 that bought a specific quantity of materials in 2020 buys less of the same materials in 2025. The purchasing power of future money is eroded.</p>
+      </div>
+
+      <div class="infobox gold" style="margin-top:12px">
+        <div class="infobox-title gold">③ Risk and Uncertainty</div>
+        <p class="body-text" style="margin:0">Future cash flows are never certain. The debtor might default; the project might fail; economic conditions might shift. A definite sum today carries zero risk of non-receipt. A promised future sum carries all the uncertainty of the intervening period. Rational agents demand a <em>risk premium</em> for accepting future money over present money.</p>
+      </div>
+
+      <div class="infobox gold" style="margin-top:12px">
+        <div class="infobox-title gold">④ Preference for Present Consumption</div>
+        <p class="body-text" style="margin:0">Human psychology exhibits a general preference for having goods and services now rather than later. This is sometimes called "time preference" or "impatience." Even without inflation or risk, people must be compensated (with interest) to defer consumption to the future.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="infobox" style="border-top-color:var(--accent-red)">
+        <div class="infobox-title red">Standard Notation</div>
+        <div class="formula-block">
+P  = Present Worth (₦)
+   = Principal amount
+
+F  = Future Worth (₦)
+   = Value at end of n
+
+n  = Number of periods
+   = Years/months/etc.
+
+i  = Interest rate/period
+   = Expressed as decimal
+
+A  = Equal end-of-period
+   = Annuity payment (₦)
+
+G  = Uniform gradient
+   = Increase per period
+        </div>
+        <p class="body-text" style="font-size:12px;margin:8px 0 0">These six variables appear in virtually every engineering economics problem. Master their definitions before anything else.</p>
+      </div>
+
+      <div class="infobox green" style="margin-top:14px">
+        <div class="infobox-title green">Quick Equivalence Check</div>
+        <p class="body-text" style="font-size:12.5px;margin-bottom:8px">At 10% annual interest, these amounts are <strong>equivalent</strong>:</p>
+        <div class="formula-block" style="font-size:11px">
+Today (t=0): <span class="val">₦1,000</span>
+Year 1:      <span class="val">₦1,100</span>
+Year 2:      <span class="val">₦1,210</span>
+Year 3:      <span class="val">₦1,331</span>
+Year 5:      <span class="val">₦1,610.51</span>
+        </div>
+        <p class="body-text" style="font-size:11.5px;margin:8px 0 0">Any one of these can be exchanged for another at 10% — that is the meaning of <em>equivalence</em>.</p>
+      </div>
+
+      <div class="pull-quote" style="margin-top:20px">
+        <div class="pull-quote-text">"₦1,000 today is worth more than ₦1,000 in the future — but how much more? Precisely as much as it would earn between now and then."</div>
+        <div class="pull-quote-attr">— TVM Principle</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ WORKED EXAMPLES ═══════════════════════════════════════ -->
+  <div class="kicker">Worked Examples</div>
+  <h2 class="headline-lg">TVM in Action</h2>
+
+  <div class="col-2 fade-in">
+    <div>
+      <div class="infobox green">
+        <div class="infobox-title green">Example 1 — The Bank Deposit</div>
+        <p class="body-text">₦200 deposited at 10%/year. What is the value after 1 year? After 5 years (compound)?</p>
+        <div class="formula-block">
+<span class="cmt">// After 1 year</span>
+Interest = 200 × 0.10 = ₦20
+Total    = 200 + 20  = <span class="val">₦220</span>
+
+<span class="cmt">// After 5 years (compound)</span>
+F = 200(1 + 0.10)⁵
+  = 200 × 1.6105 = <span class="val">₦322.10</span>
+
+<span class="cmt">// After 5 years (simple — for comparison)</span>
+F = 200(1 + 5×0.10)
+  = 200 × 1.5 = <span class="val">₦300.00</span>
+
+Difference = ₦22.10  (7.4% more with compound)
+        </div>
+        <p class="body-text" style="font-size:12.5px;margin:0">The ₦22.10 difference shows why compound interest grows faster — you earn interest on your interest.</p>
+      </div>
+    </div>
+    <div>
+      <div class="infobox red">
+        <div class="infobox-title red">Example 2 — Equivalence Decision</div>
+        <p class="body-text">Would you prefer <strong>₦1,000 today</strong> or <strong>₦1,200 in 3 years</strong> if the bank rate is 15%?</p>
+        <div class="formula-block">
+<span class="cmt">// Grow ₦1,000 forward 3 years @ 15%</span>
+F = 1000(1.15)³
+  = 1000 × 1.5209
+  = <span class="val">₦1,520.88</span>
+
+<span class="cmt">// Compare: ₦1,520.88 vs ₦1,200</span>
+₦1,520.88 &gt; ₦1,200  ✓
+
+∴ Take <span class="val">₦1,000 TODAY</span>
+
+<span class="cmt">// Alternative: bring ₦1,200 back to today</span>
+P = 1200 / (1.15)³
+  = 1200 / 1.5209
+  = <span class="val">₦788.86</span>
+
+₦1,000 &gt; ₦788.86  ← Same conclusion
+        </div>
+        <p class="body-text" style="font-size:12.5px;margin:0">You can either push P forward or pull F back — the decision is the same either way.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-single"/>
+
+  <!-- ══ DEEPER CONCEPT: EQUIVALENCE ══════════════════════════ -->
+  <div class="fade-in">
+    <h2 class="headline-lg">The Concept of Equivalence</h2>
+    <div class="col-2">
+      <div>
+        <p class="body-text">
+          <strong>Equivalence</strong> is what makes economic comparison possible. Two cash flows are equivalent when they have the <em>same economic value</em> at a given interest rate, even if they differ in timing and amount.
+        </p>
+        <p class="body-text">
+          This is the entire basis for comparing engineering alternatives. You cannot directly compare ₦500,000 spent now on Machine A against ₦80,000/year operating costs for Machine B over 10 years — they occur at different times. Equivalence lets you bring all costs to the same moment in time (usually the present), making comparison valid.
+        </p>
+        <p class="body-text">
+          The key insight: <strong>if two cash flows are equivalent, you should be indifferent between them</strong>. An investor earning 10%/year should be genuinely indifferent between receiving ₦1,000 today and ₦1,100 one year from now.
+        </p>
+      </div>
+      <div>
+        <div class="formula-block">
+<span class="cmt">// Equivalence at 10%/year</span>
+These are ALL equivalent:
+
+t=0: ₦<span class="val">1,000.00</span>  (present)
+t=1: ₦<span class="val">1,100.00</span>  (×1.1)
+t=2: ₦<span class="val">1,210.00</span>  (×1.1²)
+t=3: ₦<span class="val">1,331.00</span>  (×1.1³)
+
+<span class="cmt">// You can move any cash flow</span>
+<span class="cmt">// forward (×(1+i)ⁿ) or backward</span>
+<span class="cmt">// (÷(1+i)ⁿ) freely</span>
+        </div>
+        <div class="infobox" style="margin-top:12px">
+          <div class="infobox-title">Important Note</div>
+          <p class="body-text" style="font-size:12.5px;margin:0">Equivalence <em>changes</em> with the interest rate. ₦1,000 and ₦1,100 are equivalent at 10%, but NOT at 8% (where ₦1,000 grows to only ₦1,080). Always specify the interest rate when discussing equivalence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ WARNING BOX ═══════════════════════════════════════════ -->
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Avoid These in the Exam</div>
+    <ul>
+      <li><strong>Confusing nominal and effective rates:</strong> A bank quoting "18% compounded monthly" does NOT mean 18% per year if you compute it as a monthly rate. The effective annual rate is (1 + 0.18/12)¹² − 1 = 19.56%. Always convert.</li>
+      <li><strong>Ignoring compounding frequency:</strong> "12% compounded quarterly" means i = 3% per quarter, n measured in quarters. Students often plug in i = 12% and n in years — wrong!</li>
+      <li><strong>Comparing money at different times directly:</strong> You cannot say "I received ₦2,000 in Year 1 and spent ₦3,000 in Year 5" and conclude a ₦1,000 net cost without adjusting for time.</li>
+      <li><strong>Forgetting the direction:</strong> P→F is compounding (multiply by (1+i)ⁿ). F→P is discounting (divide by (1+i)ⁿ). These are inverses, not the same operation.</li>
+      <li><strong>Assuming inflation = interest rate:</strong> The nominal interest rate includes both inflation compensation AND a real return. Real rate ≈ nominal rate − inflation rate (Fisher equation).</li>
+    </ul>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ QUIZ ═══════════════════════════════════════════════════ -->
+  <div class="quiz-masthead fade-in">Self-Assessment · Time Value of Money</div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. The time value of money concept states that, given a positive interest rate:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> A future sum is always preferable to the same sum today</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> A present sum is worth more than the same sum available in the future</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Money has no intrinsic value — only goods have value</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Inflation and interest rate are always equal</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B.</strong> A present sum is worth more than the same sum in the future, because present money can be invested to earn returns. This is the core TVM statement. Options A and C directly contradict it; D is false — inflation and interest rate are related but not equal.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. Which of the following is NOT a reason for the time value of money?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Money can earn interest when invested</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Inflation erodes purchasing power over time</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> The colour and design of currency notes changes periodically</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Future cash flows carry uncertainty and risk</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C.</strong> Currency redesign is irrelevant to economic value. The three genuine reasons are: (1) earning power, (2) inflation, and (3) risk/uncertainty. These constitute the "time preference for money" concept in engineering economics.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. ₦500 is deposited today at 20% per year, compounded annually. What is the accumulated value after 2 years?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> ₦700 (simple interest result)</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> ₦720 (compound interest result)</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> ₦750</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> ₦660</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — ₦720.</strong><br>
+    F = 500 × (1.20)² = 500 × 1.44 = <strong>₦720</strong><br><br>
+    <em>Common trap:</em> Option A (₦700) is the simple interest answer: F = 500(1 + 2×0.2) = 500×1.4 = ₦700. If the question says "compounded," always use F = P(1+i)ⁿ, not P(1+ni).</div>
+  </div>
+
+</div>

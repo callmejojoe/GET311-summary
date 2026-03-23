@@ -1,0 +1,134 @@
+<!-- RATE OF RETURN & MARR PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 08 · Analysis Method</div>
+  <h1 class="headline-xl">Rate of Return<br><em>&amp; MARR</em></h1>
+  <p class="deck">The ultimate question in investment analysis: does this project earn enough? Rate of return gives the answer; MARR sets the bar.</p>
+  <div class="byline">GET 311 · Engineering Economics · FUTM</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-red">Decision Point</span><span class="tag tag-gold">Many Variants</span></div>
+</div>
+<div class="page-content">
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">Rate of Return &amp; MARR</h2>
+      <p class="body-text dropcap">The <strong>Rate of Return (ROR)</strong>, also called the <strong>Internal Rate of Return (IRR)</strong>, is the interest rate at which the present worth of all cash flows in a project equals exactly zero. It is the actual interest rate that the investment earns — the "yield" of the project.</p>
+      <p class="body-text">The <strong>MARR (Minimum Acceptable Rate of Return)</strong> is the organisation's threshold. If ROR ≥ MARR, the investment earns at least the minimum required and should be accepted. If ROR &lt; MARR, reject.</p>
+
+      <div class="infobox green">
+        <div class="infobox-title green">MARR Decision Rule</div>
+        <div class="formula-block" style="font-size:12px">
+If ROR ≥ MARR → ✓ ACCEPT
+If ROR &lt; MARR → ✗ REJECT
+If ROR = MARR → Indifferent (marginal)
+
+<span class="cmt">// PW method equivalent:</span>
+If PW(MARR) &gt; 0 → Accept
+If PW(MARR) &lt; 0 → Reject
+        </div>
+      </div>
+
+      <hr class="rule-single"/>
+      <h2 class="headline-lg">Effective vs Nominal Rate</h2>
+      <div class="formula-block">
+<span class="cmt">// Nominal rate r: stated annual rate</span>
+<span class="cmt">// Effective rate: true annual after compounding</span>
+
+i_eff = (1 + r/m)ᵐ − 1
+
+<span class="cmt">// Q38: r=18%, daily (m=360)</span>
+i_eff = (1 + 0.18/360)³⁶⁰ − 1
+      = (1.0005)³⁶⁰ − 1
+      = <span class="val">19.72%</span>  ← Answer D
+
+<span class="cmt">// Q39: r=8%, quarterly → annual equiv?</span>
+i_eff = (1 + 0.08/4)⁴ − 1
+      = (1.02)⁴ − 1
+      = <span class="val">8.24%</span>   ← Answer D
+      </div>
+    </div>
+    <div>
+      <div class="infobox red">
+        <div class="infobox-title red">After-Tax Rate of Return (Q19, Q33)</div>
+        <p class="body-text" style="font-size:13px">Investor wants 7% after 42% tax. What pre-tax rate is needed?</p>
+        <div class="formula-block" style="font-size:11.5px">
+After-tax = Pre-tax × (1 − tax rate)
+7% = Pre-tax × (1 − 0.42) = Pre-tax × 0.58
+Pre-tax = 7/0.58 = <span class="val">12.07%</span>  ← Answer A
+        </div>
+      </div>
+
+      <div class="infobox" style="margin-top:14px">
+        <div class="infobox-title">Banker's Discount (Q34)</div>
+        <p class="body-text" style="font-size:13px">Miss Evilla gets ₦1,340 from bank, promises ₦1,500 at end of 9 months. Find discount rate.</p>
+        <div class="formula-block" style="font-size:11.5px">
+Discount = 1500 − 1340 = ₦160
+
+<span class="cmt">// Discount rate = d/F (on FUTURE value)</span>
+d = (160/1500) per 9 months
+  = 0.10667/0.75  (annualise)
+  = <span class="val">13.73%</span>  ← Answer D
+
+<span class="cmt">// KEY: discount rate uses FUTURE value</span>
+<span class="cmt">// Interest rate uses PRESENT value</span>
+<span class="cmt">// They give different %s for same deal!</span>
+        </div>
+      </div>
+
+      <div class="infobox gold" style="margin-top:14px">
+        <div class="infobox-title gold">Q41 — Bimonthly Compounding</div>
+        <p class="body-text" style="font-size:13px">₦1,000 becomes ₦1,608.44 in 4 years compounded bimonthly. Find nominal rate.</p>
+        <div class="formula-block" style="font-size:11.5px">
+Bimonthly = 6 times/yr, 4×6=24 periods
+1608.44 = 1000(1 + r/6)²⁴
+(1 + r/6)²⁴ = 1.60844
+(1 + r/6) = 1.60844^(1/24) = 1.02
+r/6 = 0.02
+r = 0.12 = <span class="val">12.00%</span>  ← Answer B
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Rate of Return</div>
+    <ul>
+      <li><strong>Discount rate vs interest rate:</strong> Discount is computed on the FUTURE (face) value. Interest is computed on the PRESENT (principal) value. Same transaction gives different percentages.</li>
+      <li><strong>Not adjusting for compounding period:</strong> Monthly rate = nominal/12. Quarterly rate = nominal/4. Always match rate period to payment period.</li>
+      <li><strong>Accepting any positive ROR:</strong> ROR must exceed MARR, not just be positive. A 5% ROR with a 15% MARR is still a bad investment.</li>
+    </ul>
+  </div>
+  <div class="quiz-masthead fade-in">Self-Assessment · Rate of Return</div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. What rate compounded annually equals 8% compounded quarterly?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 8.07%</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 8.12%</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 8.16%</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 8.24%</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: D — 8.24%.</strong> i_eff = (1+0.08/4)⁴ − 1 = (1.02)⁴ − 1 = 1.0824 − 1 = 8.24%. Q39 in the past paper.</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. Which gives the LOWEST effective rate of interest?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 12.35% compounded annually</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 11.90% compounded annually</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 12.20% compounded annually</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 11.60% compounded annually</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: D — 11.60%.</strong> When compounded annually, nominal = effective. Just compare the numbers: 11.60% is smallest. Q40 from the past paper.</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. How long will it take money to double itself if invested at 5% compounded annually?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 13.7 years</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 14.7 years</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 14.2 years</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 15.3 years</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C — 14.2 years.</strong> 2P = P(1.05)ⁿ → (1.05)ⁿ = 2 → n = ln(2)/ln(1.05) = 0.6931/0.04879 = 14.2 years. Q42 from the past paper.</div>
+  </div>
+</div>

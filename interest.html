@@ -1,0 +1,283 @@
+<!-- INTEREST & FORMULAE PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 02 · Core Concept</div>
+  <h1 class="headline-xl">Interest &<br><em>Formulae</em></h1>
+  <p class="deck">The mathematical machinery of engineering economics. Six essential factor equations — master these and you can solve virtually any exam problem placed before you.</p>
+  <div class="byline">GET 311 · Engineering Economics · FUTM</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <span class="tag tag-gold">Formula-Heavy</span><span class="tag tag-red">Always Examined</span><span class="tag tag-grey">Memorise Tables</span>
+  </div>
+</div>
+
+<div class="page-content">
+
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">Simple vs Compound Interest</h2>
+      <p class="body-text dropcap">
+        Two fundamentally different ways to calculate interest — and choosing the wrong one in an exam can cost you the entire problem. <strong>Simple interest</strong> applies the interest rate only to the original principal, yielding a linear growth curve. <strong>Compound interest</strong> applies the rate to the accumulated total each period, producing exponential growth.
+      </p>
+      <p class="body-text">In engineering practice, <em>compound interest is almost universally used</em> unless explicitly stated otherwise. Banks, loans, and investment analyses all assume compounding.</p>
+
+      <div class="formula-block">
+<span class="cmt">// SIMPLE INTEREST — linear growth</span>
+F(n) = P(1 + n·i)     <span class="var">Eq. 1</span>
+
+Example: ₦1,000 @ 10% for 5 yrs:
+F = 1000(1 + 5×0.10) = 1000×1.5 = <span class="val">₦1,500</span>
+
+<span class="cmt">// COMPOUND INTEREST — exponential growth</span>
+F(n) = P(1 + i)ⁿ      <span class="var">Eq. 2</span>
+
+Example: ₦1,000 @ 10% for 5 yrs:
+F = 1000(1.10)⁵ = 1000×1.6105 = <span class="val">₦1,610.51</span>
+
+<span class="cmt">// Difference = ₦110.51 → 7.4% more</span>
+      </div>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">"Interest on interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it."</div>
+        <div class="pull-quote-attr">— Attributed to various financiers</div>
+      </div>
+    </div>
+    <div>
+      <div class="infobox">
+        <div class="infobox-title">Simple vs Compound: Growth Comparison</div>
+        <div class="formula-block" style="font-size:11px">
+Principal: ₦1,000 · Rate: 10%/yr
+
+Year  Simple    Compound  Difference
+──────────────────────────────────
+ 0    ₦1,000    ₦1,000      ₦0
+ 1    ₦1,100    ₦1,100      ₦0
+ 2    ₦1,200    ₦1,210     ₦10
+ 3    ₦1,300    ₦1,331     ₦31
+ 5    ₦1,500    ₦1,611    ₦111
+10    ₦2,000    ₦2,594    ₦594
+20    ₦3,000    ₦6,727   ₦3,727
+        </div>
+        <p class="body-text" style="font-size:12px;margin:8px 0 0">The gap widens dramatically over time — this is the power (and danger) of compound interest.</p>
+      </div>
+
+      <div class="infobox red" style="margin-top:14px">
+        <div class="infobox-title red">Derivation of Compound Formula</div>
+        <div class="formula-block" style="font-size:11px">
+F(1) = P + P·i = P(1+i)
+F(2) = F(1)(1+i) = P(1+i)²
+F(3) = F(2)(1+i) = P(1+i)³
+  ⋮
+F(n) = P(1+i)ⁿ  ← General case
+        </div>
+        <p class="body-text" style="font-size:12px;margin:6px 0 0">Each year's principal = prior year's total, so interest accumulates on the growing balance.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ THE 6 FACTORS ═════════════════════════════════════════ -->
+  <div class="fade-in">
+    <div class="kicker">The 6 Core Interest Factors</div>
+    <h2 class="headline-lg">Your Problem-Solving Toolkit</h2>
+    <p class="body-text">Every engineering economics calculation reduces to one (or a combination) of these six factor equations. The notation (X/Y, i%, n) means "find X given Y, at interest rate i%, over n periods." The factor value is read from the compound interest tables.</p>
+  </div>
+
+  <div class="data-table-wrap fade-in">
+    <table class="data-table">
+      <caption>THE SIX STANDARD INTEREST FACTORS — From Prof. K.C. Bala's GET 311 Notes</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Factor Name</th>
+          <th>Notation</th>
+          <th>Formula</th>
+          <th>Finds</th>
+          <th>Given</th>
+          <th>Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Compound Amount</td>
+          <td class="mono">(F/P, i%, n)</td>
+          <td class="mono">(1+i)ⁿ</td>
+          <td class="mono">F</td>
+          <td class="mono">P</td>
+          <td>Future value of a present sum</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Present Worth</td>
+          <td class="mono">(P/F, i%, n)</td>
+          <td class="mono">(1+i)⁻ⁿ</td>
+          <td class="mono">P</td>
+          <td class="mono">F</td>
+          <td>Discount a future sum to today</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Series Compound Amount</td>
+          <td class="mono">(F/A, i%, n)</td>
+          <td class="mono">[(1+i)ⁿ−1]/i</td>
+          <td class="mono">F</td>
+          <td class="mono">A</td>
+          <td>Future worth of regular payments</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Sinking Fund</td>
+          <td class="mono">(A/F, i%, n)</td>
+          <td class="mono">i/[(1+i)ⁿ−1]</td>
+          <td class="mono">A</td>
+          <td class="mono">F</td>
+          <td>Regular deposit to reach target F</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Series Present Worth</td>
+          <td class="mono">(P/A, i%, n)</td>
+          <td class="mono">[(1+i)ⁿ−1]/[i(1+i)ⁿ]</td>
+          <td class="mono">P</td>
+          <td class="mono">A</td>
+          <td>PW of a series of equal payments</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Capital Recovery</td>
+          <td class="mono">(A/P, i%, n)</td>
+          <td class="mono">i(1+i)ⁿ/[(1+i)ⁿ−1]</td>
+          <td class="mono">A</td>
+          <td class="mono">P</td>
+          <td>Loan repayment calculation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="infobox gold fade-in" style="margin-top:16px">
+    <div class="infobox-title gold">Memory Aid — Reading the Notation</div>
+    <div class="col-3">
+      <div>
+        <p class="body-text" style="font-size:13px">(F/P, 8%, 10) means:<br>"Find <strong>F</strong>, given <strong>P</strong>, at 8% for 10 periods." The slash literally reads "given." Numerator is what you want; denominator is what you have.</p>
+      </div>
+      <div>
+        <p class="body-text" style="font-size:13px">Factor pairs are <strong>reciprocals</strong>: (F/P)×(P/F) = 1. So if you know one, you can invert for the other. (A/F) and (F/A) are also reciprocals.</p>
+      </div>
+      <div>
+        <p class="body-text" style="font-size:13px">Notice: (A/F) + i = (A/P). The capital recovery factor equals the sinking fund factor plus the interest rate. This relationship helps you double-check table values.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ EFFECTIVE RATE ══════════════════════════════════════ -->
+  <div class="fade-in">
+    <h2 class="headline-lg">Effective vs Nominal Interest Rate</h2>
+    <div class="col-2">
+      <div>
+        <p class="body-text">When a bank quotes "18% compounded monthly," the <strong>18% is the nominal rate</strong> — the stated annual rate that does not account for within-year compounding. The <strong>effective rate</strong> is the true annual rate that produces the same result. It is always ≥ the nominal rate.</p>
+        <p class="body-text">For engineering problems, always convert to the effective rate before using annual interest factor tables, unless the problem specifies the compounding period matches the payment period.</p>
+        <div class="formula-block">
+<span class="cmt">// Effective Annual Rate</span>
+i_eff = (1 + r/m)ᵐ − 1   <span class="var">Eq. 18</span>
+
+where: r = nominal annual rate
+       m = compounding periods/year
+
+<span class="cmt">// Example: r=18%, monthly (m=12)</span>
+i_eff = (1 + 0.18/12)¹² − 1
+      = (1.015)¹² − 1
+      = 1.1956 − 1
+      = <span class="val">19.56%</span>
+        </div>
+      </div>
+      <div>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <caption>NOMINAL 12% AT DIFFERENT COMPOUNDING FREQUENCIES</caption>
+            <thead>
+              <tr><th>Frequency</th><th>m</th><th>Effective Rate</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Annual</td><td class="mono">1</td><td class="mono">12.00%</td></tr>
+              <tr><td>Semi-annual</td><td class="mono">2</td><td class="mono">12.36%</td></tr>
+              <tr><td>Quarterly</td><td class="mono">4</td><td class="mono">12.55%</td></tr>
+              <tr><td>Monthly</td><td class="mono">12</td><td class="mono">12.68%</td></tr>
+              <tr><td>Weekly</td><td class="mono">52</td><td class="mono">12.73%</td></tr>
+              <tr><td>Daily (360)</td><td class="mono">360</td><td class="mono">12.75%</td></tr>
+              <tr><td>Continuous</td><td class="mono">∞</td><td class="mono">e⁰·¹² − 1 = 12.75%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="body-text" style="font-size:12px;margin-top:8px">The more frequent the compounding, the higher the effective rate — but with diminishing returns as you approach continuous compounding.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Past paper worked example -->
+  <div class="infobox red fade-in" style="margin-top:20px">
+    <div class="infobox-title red">Past Paper Example — Q38: 18% Compounded Daily</div>
+    <p class="body-text">What effective rate corresponds to 18% compounded daily? (1 year = 360 days)</p>
+    <div class="formula-block">
+i_eff = (1 + 0.18/360)³⁶⁰ − 1
+      = (1.0005)³⁶⁰ − 1
+
+<span class="cmt">// (1.0005)³⁶⁰ ≈ e^(0.18) ≈ 1.19722</span>
+      = 1.19722 − 1
+      = <span class="val">19.72%</span>   ← Answer D in Q38
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Interest Formulae</div>
+    <ul>
+      <li><strong>Wrong formula for given/find:</strong> If you need to find A given P, use (A/P) — Capital Recovery Factor. Students often mistakenly use (A/F) — Sinking Fund. Remember: the denominator tells you what you already know.</li>
+      <li><strong>Forgetting to convert % to decimal:</strong> i = 10% means i = 0.10 in all formulas. Using i = 10 gives a wildly wrong answer.</li>
+      <li><strong>Misidentifying compounding period:</strong> If the problem says "12% compounded quarterly," the quarterly rate is 3% and n is in quarters, not i = 12% and n in years.</li>
+      <li><strong>Inverting factors incorrectly:</strong> (P/F, 8%, 5) = 0.6806. So (F/P, 8%, 5) = 1/0.6806 = 1.4693 — always verify with the full formula.</li>
+    </ul>
+  </div>
+
+  <div class="quiz-masthead fade-in">Self-Assessment · Interest & Formulae</div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. What is the factor name for the formula i/[(1+i)ⁿ − 1]?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Capital Recovery Factor (A/P)</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Series Present Worth Factor (P/A)</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Sinking Fund Factor (A/F)</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Compound Amount Factor (F/P)</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C — Sinking Fund Factor (A/F, i%, n).</strong><br>This factor converts a future sum F into the equivalent uniform annual deposit A. Compare with Capital Recovery (A/P) which uses i(1+i)ⁿ in the numerator. The Sinking Fund Factor is the answer to Q113/Q114 in the past paper.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. A loan of ₦50,000 to be repaid in 3 years as ₦65,000. What is the effective annual interest rate?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 9.01%</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 9.14%</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 9.31%</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 9.41%</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — 9.14%.</strong><br>Using F = P(1+i)ⁿ: 65,000 = 50,000(1+i)³<br>(1+i)³ = 1.3 → (1+i) = 1.3^(1/3) = 1.0914 → i = <strong>9.14%</strong>. This is Q37 in the past paper.</div>
+  </div>
+
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. At what annual rate will ₦1,000 triple in 10 years (compound interest)?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> 10.00%</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> 11.61%</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> 12.50%</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> 15.00%</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — 11.61%.</strong><br>3000 = 1000(1+i)¹⁰ → (1+i)¹⁰ = 3 → (1+i) = 3^(0.1) = 1.1161 → i = <strong>11.61%</strong>. This is the exercise from the GET 311 lecture notes: "What interest rate triples ₦1,000 in 10 years?"</div>
+  </div>
+
+</div>

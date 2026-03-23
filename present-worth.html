@@ -1,0 +1,128 @@
+<!-- PRESENT & FUTURE WORTH PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 06 · Analysis Method</div>
+  <h1 class="headline-xl">Present Worth &<br><em>Future Worth</em></h1>
+  <p class="deck">The premier tools for comparing engineering alternatives — reduce every cash flow to a single equivalent value at one moment in time, then compare with confidence.</p>
+  <div class="byline">GET 311 · Engineering Economics · FUTM</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-gold">Decision Tool</span><span class="tag tag-red">Investment Analysis</span></div>
+</div>
+
+<div class="page-content">
+  <div class="col-2 fade-in">
+    <div>
+      <h2 class="headline-lg">The Present Worth Method</h2>
+      <p class="body-text dropcap">The Present Worth (PW) method converts every cash flow in a project — initial investment, annual operating costs, revenues, and salvage value — to their equivalent value at <strong>time zero (now)</strong>. By expressing everything in today's naira, you create a level playing field for comparison.</p>
+      <p class="body-text">If the PW of all cash flows is <strong>positive</strong>, the project earns more than the required minimum rate of return (MARR) and should be accepted. If negative, the project fails to cover the minimum acceptable return. If zero, the project earns exactly MARR.</p>
+      <p class="body-text">The method is most powerful when comparing <strong>mutually exclusive alternatives</strong> — choose the option with the highest (least negative or most positive) present worth.</p>
+
+      <div class="formula-block">
+<span class="cmt">// Single sum discounting</span>
+P = F(P/F, i%, n) = F/(1+i)ⁿ
+
+<span class="cmt">// Series present worth</span>
+P = A(P/A, i%, n)
+
+<span class="cmt">// Mixed cash flows: sum all present worths</span>
+PW = −Initial Cost + PW(revenues)
+     − PW(costs) + PW(salvage)
+
+<span class="cmt">// Decision rule</span>
+If PW &gt; 0 → Accept (earns more than MARR)
+If PW &lt; 0 → Reject
+If PW = 0 → Earns exactly MARR
+      </div>
+    </div>
+    <div>
+      <div class="infobox green">
+        <div class="infobox-title green">Example — Past Paper Q15: Proposal Comparison</div>
+        <p class="body-text" style="font-size:13px">Proposal A: Build now for ₦400,000. Proposal B: Build smaller for ₦300,000 now + ₦200,000 extension at end of year 5. Interest = 20%. Which costs less?</p>
+        <div class="formula-block" style="font-size:11.5px">
+PW of Proposal A = ₦400,000
+
+PW of Proposal B:
+= 300,000 + 200,000(P/F, 20%, 5)
+= 300,000 + 200,000 × 0.4019
+= 300,000 + 80,376
+= <span class="val">₦380,376</span>
+
+Savings = 400,000 − 380,376 = <span class="val">₦19,624</span>
+∴ Proposal B is cheaper ← Answer D
+        </div>
+      </div>
+
+      <div class="infobox" style="margin-top:14px">
+        <div class="infobox-title">Example — Simple Discounting</div>
+        <p class="body-text" style="font-size:13px">How much to invest NOW at 6%/year to collect ₦12,000 in 7 years?</p>
+        <div class="formula-block" style="font-size:11.5px">
+P = 12,000(P/F, 6%, 7)
+  = 12,000 × 0.6651
+  = <span class="val">₦7,981.20</span>
+
+<span class="cmt">// Meaning: ₦7,981.20 today @ 6%</span>
+<span class="cmt">// equals ₦12,000 in 7 years</span>
+        </div>
+      </div>
+
+      <div class="infobox gold" style="margin-top:14px">
+        <div class="infobox-title gold">Capitalized Cost — Infinite Life Projects</div>
+        <p class="body-text" style="font-size:13px">For projects lasting forever (dams, roads, public infrastructure), the present worth of perpetual maintenance is:</p>
+        <div class="formula-block" style="font-size:11.5px">
+P = A/i          <span class="cmt">// Eq. from P/A as n→∞</span>
+
+CC = First Cost + A/i
+
+<span class="cmt">// Dam example: FC=₦2M, annual maint=₦50,000, i=8%</span>
+CC = 2,000,000 + 50,000/0.08
+   = 2,000,000 + 625,000 = <span class="val">₦2,625,000</span>
+        </div>
+        <p class="body-text" style="font-size:11.5px;margin:6px 0 0">Capitalized cost is also known as <strong>Life Cycle Cost</strong> — the answer to Q108.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <div class="warning-box fade-in">
+    <div class="warning-title">⚑ Common Pitfalls — Present & Future Worth</div>
+    <ul>
+      <li><strong>Unequal lives comparison:</strong> Never compare PW of two alternatives with different lifespans directly. Use the Least Common Multiple (LCM) of the lives, or use Annual Worth method instead.</li>
+      <li><strong>Forgetting salvage value:</strong> It's a positive inflow at year n. Students often omit it entirely, undervaluing the investment.</li>
+      <li><strong>Wrong reference point:</strong> PW brings everything to t=0. FW brings everything to t=n. Both should give the same accept/reject decision — if they don't, you've made an error.</li>
+    </ul>
+  </div>
+
+  <div class="quiz-masthead fade-in">Self-Assessment · Present &amp; Future Worth</div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q1. What present sum will yield ₦1,000 at 10% per year for 5 years?</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> ₦683.01</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> ₦620.92</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> ₦651.34</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> ₦595.00</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — ₦620.92.</strong> P = 1000/(1.1)⁵ = 1000/1.6105 = ₦620.92. This is stated directly in Prof. Bala's lecture notes as a worked example in Section 3.4(ii).</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q2. The present worth of cost for an infinite (perpetual) time period is called:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> Annual Cost</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> Incremental Cost</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> Capitalized Cost</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> Operating Cost</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: C — Capitalized Cost.</strong> CC = First Cost + A/i for perpetual maintenance. Also known as Life Cycle Cost. Q107 and Q108 in the past paper test this definition.</div>
+  </div>
+  <div class="quiz-item fade-in">
+    <div class="quiz-q">Q3. Present worth of two ₦100 payments at end of years 3 and 4 at 8% annual interest:</div>
+    <div class="quiz-opts">
+      <div class="quiz-opt"><span class="opt-key">A.</span> ₦150.56</div>
+      <div class="quiz-opt"><span class="opt-key">B.</span> ₦152.88</div>
+      <div class="quiz-opt"><span class="opt-key">C.</span> ₦153.89</div>
+      <div class="quiz-opt"><span class="opt-key">D.</span> ₦151.09</div>
+    </div>
+    <button class="reveal-btn" onclick="revealAnswer(this)">▶ Reveal Answer</button>
+    <div class="answer-reveal"><strong>✓ Answer: B — ₦152.88.</strong> P = 100(P/F,8%,3) + 100(P/F,8%,4) = 100×0.7938 + 100×0.7350 = 79.38 + 73.50 = ₦152.88. This is Q48 from the past paper.</div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<!-- GLOSSARY & QUICK REVIEW PAGE -->
+<div class="page-masthead">
+  <div class="kicker">Topic 09 · Quick Review</div>
+  <h1 class="headline-xl">Glossary &<br><em>Formula Sheet</em></h1>
+  <p class="deck">Everything you need the night before your exam. All formulas in one block, all key terms searchable. Your last-minute companion.</p>
+  <div class="byline">GET 311 · Engineering Economics · Complete Reference</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-gold">★ Exam Night</span><span class="tag tag-red">Complete Reference</span></div>
+</div>
+
+<div class="page-content">
+
+  <!-- ══ MASTER FORMULA BLOCK ══════════════════ -->
+  <div class="kicker fade-in">Master Formula Reference</div>
+  <div class="formula-block fade-in" style="font-size:12px">
+<span class="cmt">══ SIMPLE INTEREST ══════════════════════════</span>
+F = P(1 + n·i)
+
+<span class="cmt">══ COMPOUND INTEREST ════════════════════════</span>
+F = P(1+i)ⁿ = P(F/P, i%, n)
+P = F/(1+i)ⁿ = F(P/F, i%, n)
+
+<span class="cmt">══ THE SIX FACTORS ══════════════════════════</span>
+(F/P) = (1+i)ⁿ                          → Compound Amount
+(P/F) = (1+i)⁻ⁿ                         → Present Worth
+(F/A) = [(1+i)ⁿ−1]/i                    → Series Compound Amount
+(A/F) = i/[(1+i)ⁿ−1]                   → Sinking Fund
+(P/A) = [(1+i)ⁿ−1]/[i(1+i)ⁿ]          → Series Present Worth
+(A/P) = i(1+i)ⁿ/[(1+i)ⁿ−1]            → Capital Recovery
+
+<span class="cmt">══ GRADIENT SERIES ══════════════════════════</span>
+P = G(P/G, i%, n)      A = G(A/G, i%, n)
+
+<span class="cmt">══ DEFERRED ANNUITY ════════════════════════</span>
+P = A(P/A, i%, n−D+1) × (P/F, i%, D−1)
+
+<span class="cmt">══ EFFECTIVE INTEREST RATE ═════════════════</span>
+i_eff = (1 + r/m)ᵐ − 1     (r = nominal, m = periods/yr)
+Continuous: i_eff = eʳ − 1
+
+<span class="cmt">══ BREAK-EVEN ANALYSIS ═════════════════════</span>
+Q_BEP = F / (p − v)
+P/V Ratio ϕ = (p − v) / p = Contribution / SR
+Q_BEP (via ϕ) = F / ϕ
+Margin of Safety % = (Q − Q_BEP)/Q × 100
+
+<span class="cmt">══ DEPRECIATION ════════════════════════════</span>
+SL:   d = (P−S)/n       BV_k = P − k·d
+SYD:  SOYD = n(n+1)/2   d_k = (n−k+1)/SOYD × (P−S)
+DB:   BV_k = P(1−d%)ᵏ   d_k = d% × BV_{k-1}
+SF:   A = (P−S)(A/F, i%, n)
+
+<span class="cmt">══ DEPLETION ═══════════════════════════════</span>
+Unit:       Depletion = P × Units_yr / Total_units
+Percentage: Depletion = % × Gross Income (max 50% net taxable)
+
+<span class="cmt">══ PERPETUITY / CAPITALIZED COST ═══════════</span>
+P = A/i          CC = First Cost + A/i
+
+<span class="cmt">══ USEFUL APPROXIMATIONS ═══════════════════</span>
+Rule of 72:  n ≈ 72/i%  (doubles money)
+After-tax:   Pre-tax rate = After-tax rate / (1 − tax rate)
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ FACTOR TABLE ════════════════════════ -->
+  <div class="kicker fade-in">Interest Factor Quick Reference</div>
+  <div class="data-table-wrap fade-in">
+    <table class="data-table">
+      <caption>ALL SIX FACTORS — FIND / GIVEN / FORMULA</caption>
+      <thead>
+        <tr><th>Find</th><th>Given</th><th>Factor Notation</th><th>Formula</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>F</td><td>P</td><td class="mono">(F/P, i%, n)</td><td class="mono">(1+i)ⁿ</td><td>Future value of present sum</td></tr>
+        <tr><td>P</td><td>F</td><td class="mono">(P/F, i%, n)</td><td class="mono">(1+i)⁻ⁿ</td><td>Discount future to present</td></tr>
+        <tr><td>F</td><td>A</td><td class="mono">(F/A, i%, n)</td><td class="mono">[(1+i)ⁿ−1]/i</td><td>Accumulate regular savings</td></tr>
+        <tr><td>A</td><td>F</td><td class="mono">(A/F, i%, n)</td><td class="mono">i/[(1+i)ⁿ−1]</td><td>Regular deposit for target F</td></tr>
+        <tr><td>P</td><td>A</td><td class="mono">(P/A, i%, n)</td><td class="mono">[(1+i)ⁿ−1]/[i(1+i)ⁿ]</td><td>Present worth of annuity</td></tr>
+        <tr><td>A</td><td>P</td><td class="mono">(A/P, i%, n)</td><td class="mono">i(1+i)ⁿ/[(1+i)ⁿ−1]</td><td>Loan repayment amount</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="rule-double"/>
+
+  <!-- ══ GLOSSARY ════════════════════════════ -->
+  <div class="kicker fade-in">Glossary of Terms</div>
+  <div class="gloss-search fade-in">
+    <span style="color:var(--ink3);font-family:var(--font-head);font-size:11px">🔍</span>
+    <input type="text" id="gloss-search-input" placeholder="Search any term..." autocomplete="off"/>
+  </div>
+
+  <div id="glossary-terms">
+    <div class="gloss-entry"><div class="gloss-term">Annuity</div><div class="gloss-def">A uniform series of equal payments at equal time intervals. The most common cash flow pattern in loans and savings problems.</div><div class="gloss-formula">P = A(P/A, i%, n) · F = A(F/A, i%, n)</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Annuity Due</div><div class="gloss-def">An annuity where payments occur at the BEGINNING of each period (contrast with ordinary annuity, where payments are at period end).</div><div class="gloss-formula">Value = Ordinary Annuity × (1+i)</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Book Value (BV)</div><div class="gloss-def">The recorded value of an asset at any given time, equal to first cost minus total accumulated depreciation to date.</div><div class="gloss-formula">BV_k = P − Total Depreciation to year k</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Break-Even Point (BEP)</div><div class="gloss-def">The output level where Total Revenue equals Total Cost. Neither profit nor loss is made. The minimum sales volume required to cover all costs.</div><div class="gloss-formula">Q_BEP = Fixed Cost / (Selling Price − Variable Cost per unit)</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Capital Recovery Factor</div><div class="gloss-def">Converts a present sum P into a uniform series A over n periods. Used to determine loan repayment instalments.</div><div class="gloss-formula">(A/P, i%, n) = i(1+i)ⁿ / [(1+i)ⁿ−1]</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Capitalized Cost</div><div class="gloss-def">The present worth of all costs for a project over an infinite (perpetual) time horizon. Used for infrastructure with indefinite life.</div><div class="gloss-formula">CC = First Cost + Annual Cost / i</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Cash Flow</div><div class="gloss-def">The stream of monetary values — both inflows (receipts, revenues) and outflows (costs, investments) — resulting from an engineering project over its life.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Compound Amount Factor</div><div class="gloss-def">Converts a present sum P to a future sum F at compound interest. The basic time-value factor.</div><div class="gloss-formula">(F/P, i%, n) = (1+i)ⁿ</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Compound Interest</div><div class="gloss-def">Interest calculated on both the original principal AND all previously accumulated interest. Produces exponential growth.</div><div class="gloss-formula">F = P(1+i)ⁿ</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Contribution Margin</div><div class="gloss-def">The selling price minus variable cost per unit. Each unit sold contributes this amount toward covering fixed costs and generating profit.</div><div class="gloss-formula">C = p − v</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Declining Balance (DB)</div><div class="gloss-def">An accelerated depreciation method where annual depreciation equals a fixed percentage of the book value at the start of each year.</div><div class="gloss-formula">BV_k = P(1−d%)ᵏ</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Deferred Annuity</div><div class="gloss-def">An annuity whose first payment is delayed until a future period D (rather than beginning at period 1).</div><div class="gloss-formula">P = A(P/A, i%, n−D+1)(P/F, i%, D−1)</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Depletion</div><div class="gloss-def">Reduction in value of natural resources (mines, oil wells, timber stands, quarries) due to gradual extraction of their contents. Analogous to depreciation for manufactured assets.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Depreciation</div><div class="gloss-def">Reduction in the monetary value of an asset due to use, wear and tear, and passage of time. Recorded as a periodic expense to allocate the asset's cost over its useful life.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Discount</div><div class="gloss-def">The difference between the future (maturity) value and the present value of a financial obligation. Also the process of finding present worth by discounting future values.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Effective Interest Rate</div><div class="gloss-def">The true annual interest rate that accounts for the actual compounding frequency. Always greater than or equal to the nominal rate.</div><div class="gloss-formula">i_eff = (1 + r/m)ᵐ − 1</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Engineering Economics</div><div class="gloss-def">The application of economic analysis techniques to engineering decisions — selecting from alternatives to minimise costs and/or maximise benefits.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Equivalence</div><div class="gloss-def">Different sums of money at different times that have the same economic value at a specified interest rate. The foundation for comparing alternatives.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Fixed Costs</div><div class="gloss-def">Business costs that do not change with the level of production output. Examples: rent, depreciation, research and development, administrative overhead.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Future Worth (F)</div><div class="gloss-def">The equivalent value of a present sum or cash flow series at some future time n, compounded at rate i.</div><div class="gloss-formula">F = P(1+i)ⁿ</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Gradient Series (G)</div><div class="gloss-def">A cash flow series where payments increase (or decrease) by a constant amount G each period. Period 1 payment = 0; period k payment = (k−1)G.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Interest</div><div class="gloss-def">The money paid for the use of borrowed capital, or the return earned on invested capital over a given time period.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">IRR (Internal Rate of Return)</div><div class="gloss-def">The interest rate at which the present worth of all project cash flows equals zero. The project's actual earning rate.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Marginal Cost</div><div class="gloss-def">The change in total cost resulting from producing one additional unit. Equals the variable cost per unit in the linear cost model.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Margin of Safety</div><div class="gloss-def">The excess of actual (or budgeted) output over the break-even output. Measures how far sales can fall before losses begin.</div><div class="gloss-formula">MoS% = (Q_actual − Q_BEP)/Q_actual × 100</div></div>
+    <div class="gloss-entry"><div class="gloss-term">MARR</div><div class="gloss-def">Minimum Acceptable Rate of Return. The threshold interest rate set by an organisation below which investments are rejected. Also called the hurdle rate.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Nominal Interest Rate</div><div class="gloss-def">The stated annual interest rate that does not account for intra-year compounding. Must be converted to the effective rate for accurate calculations when compounding is more frequent than annual.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Perpetuity</div><div class="gloss-def">An annuity that continues indefinitely, with no fixed end date. Its present worth equals A/i.</div><div class="gloss-formula">P = A/i</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Present Worth (P)</div><div class="gloss-def">The equivalent current value of a future cash flow or series, found by discounting at interest rate i. Also called present value.</div><div class="gloss-formula">P = F/(1+i)ⁿ</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Profit/Volume Ratio (ϕ)</div><div class="gloss-def">The ratio of contribution to sales revenue. Indicates what fraction of each naira of revenue contributes to covering fixed costs and generating profit.</div><div class="gloss-formula">ϕ = (p−v)/p = Contribution/Sales Revenue</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Salvage Value (S)</div><div class="gloss-def">The estimated resale, scrap, or disposal value of an asset at the end of its useful economic life. A positive cash inflow at year n in depreciation analysis.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Simple Interest</div><div class="gloss-def">Interest calculated only on the original principal, not on previously accumulated interest. Produces linear growth.</div><div class="gloss-formula">F = P(1 + n·i)</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Sinking Fund Factor</div><div class="gloss-def">Converts a future sum F into the uniform annual payment A needed to accumulate that amount. Used for asset replacement planning.</div><div class="gloss-formula">(A/F, i%, n) = i/[(1+i)ⁿ−1]</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Straight-Line Depreciation (SL)</div><div class="gloss-def">The simplest depreciation method. Equal annual charges spread the depreciable cost evenly over the asset's useful life.</div><div class="gloss-formula">d = (P−S)/n per year</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Sum-of-Years Digits (SYD)</div><div class="gloss-def">An accelerated depreciation method that front-loads depreciation. Higher charges in early years, tapering in later years.</div><div class="gloss-formula">d_k = (n−k+1)/SOYD × (P−S); SOYD = n(n+1)/2</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Time Value of Money (TVM)</div><div class="gloss-def">The principle that money available now is worth more than the same amount in the future, due to its earning potential, inflation, and risk. The foundational concept of engineering economics.</div></div>
+    <div class="gloss-entry"><div class="gloss-term">Variable Costs</div><div class="gloss-def">Costs that vary directly and proportionally with the level of production output. Examples: raw materials, direct labour, packaging, commissions, royalties per unit sold.</div></div>
+  </div>
+
+</div>

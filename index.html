@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Engineering Economic — GET 311 Study Hub</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="reading-progress"></div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║            S I D E B A R            ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<nav id="sidebar">
+  <div class="sidebar-masthead">
+    <div class="sidebar-edition">
+      <span>GET 311</span>
+    </div>
+    <div class="sidebar-title">EngEcon</div>
+    <div class="sidebar-subtitle">Federal University of Technology, Minna</div>
+    <hr class="sidebar-rule"/>
+    <div style="font-family:var(--font-mono);font-size:9px;color:var(--ink4);letter-spacing:0.08em">
+      Prof. K.C. Bala · Mech. Engrg Dept.
+    </div>
+  </div>
+  <hr class="sidebar-rule-thick"/>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Overview</div>
+    <div class="nav-item active" data-page="home">
+      <span class="nav-num">00</span> Front Page
+    </div>
+
+    <div class="nav-section-label">Core Concepts</div>
+    <div class="nav-item" data-page="time-value">
+      <span class="nav-num">01</span> Time Value of Money
+    </div>
+    <div class="nav-item" data-page="interest">
+      <span class="nav-num">02</span> Interest &amp; Formulae
+    </div>
+    <div class="nav-item" data-page="cashflow">
+      <span class="nav-num">03</span> Cash Flow &amp; Diagrams
+    </div>
+    <div class="nav-item" data-page="depreciation">
+      <span class="nav-num">04</span> Depreciation &amp; Depletion
+    </div>
+
+    <div class="nav-section-label">Analysis Methods</div>
+    <div class="nav-item" data-page="breakeven">
+      <span class="nav-num">05</span> Break-Even Analysis
+    </div>
+    <div class="nav-item" data-page="present-worth">
+      <span class="nav-num">06</span> Present &amp; Future Worth
+    </div>
+    <div class="nav-item" data-page="annuities">
+      <span class="nav-num">07</span> Annuities &amp; Series
+    </div>
+    <div class="nav-item" data-page="rates">
+      <span class="nav-num">08</span> Rate of Return &amp; MARR
+    </div>
+
+    <div class="nav-section-label">Reference</div>
+    <div class="nav-item" data-page="glossary">
+      <span class="nav-num">09</span> Quick Review &amp; Glossary
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div>Vol. III · Issue 311 · Engineering Economics</div>
+    <div style="margin-top:4px">FUTM · Minna, Niger State</div>
+    <div style="margin-top:4px;color:var(--accent-gold)">★ Examination Preparation Edition ★</div>
+  </div>
+</nav>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║          M A I N   W R A P          ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div id="main-wrapper">
+
+  <!-- TOP BAR / TOPBAR MASTHEAD -->
+  <header id="topbar">
+    <div class="topbar-masthead">
+      <!-- Left metadata -->
+      <div class="topbar-left">
+        <div id="live-date" style="letter-spacing:0.08em;text-transform:uppercase;font-size:9px"></div>
+        <div style="margin-top:2px">Price: Free · For Exam Preparation Only</div>
+      </div>
+
+      <!-- Center: Paper Name -->
+      <div class="topbar-title-block">
+        <div class="topbar-paper-name">The Engineering Economic</div>
+        <div class="topbar-tagline">"All the engineering economy that's fit to print"</div>
+      </div>
+
+      <!-- Right: Controls -->
+      <div class="topbar-right">
+        <button id="mobile-toggle-btn" id="mobile-toggle">☰ Menu</button>
+
+        <!-- THEME TOGGLE -->
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+          <div class="toggle-track">
+            <div class="toggle-thumb"></div>
+          </div>
+          <span id="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section nav strip -->
+    <div class="topbar-nav-strip">
+      <div class="topbar-nav-item active" data-page="home">Home</div>
+      <div class="topbar-nav-item" data-page="time-value">TVM</div>
+      <div class="topbar-nav-item" data-page="interest">Interest</div>
+      <div class="topbar-nav-item" data-page="cashflow">Cash Flow</div>
+      <div class="topbar-nav-item" data-page="depreciation">Depreciation</div>
+      <div class="topbar-nav-item" data-page="breakeven">Break-Even</div>
+      <div class="topbar-nav-item" data-page="present-worth">PW/FW</div>
+      <div class="topbar-nav-item" data-page="annuities">Annuities</div>
+      <div class="topbar-nav-item" data-page="rates">ROR/MARR</div>
+      <div class="topbar-nav-item" data-page="glossary">Glossary</div>
+    </div>
+  </header>
+
+  <!-- ── PAGE OUTLET ─────────────────────────── -->
+  <main id="page-outlet">
+    <!-- Content loaded dynamically by router -->
+    <div class="page-content" style="display:flex;align-items:center;justify-content:center;min-height:60vh">
+      <div style="text-align:center">
+        <div style="font-family:var(--font-black);font-size:40px;color:var(--ink4)">Loading...</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink4);margin-top:8px;letter-spacing:0.1em">SETTING COMPOSITOR TYPE</div>
+      </div>
+    </div>
+  </main>
+
+</div><!-- /#main-wrapper -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
